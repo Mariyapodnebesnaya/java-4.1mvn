@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class BonusServiceTest {
     @ParameterizedTest
     @CsvFileSource(resources = "/data.csv")
-    void hui(long expected, long amount, boolean registered) {
+    void test(long expected, long amount, boolean registered) {
         BonusService service = new BonusService();
         // вызываем целевой метод:
         long actual = service.calculate(amount, registered);
